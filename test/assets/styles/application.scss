@@ -1,0 +1,626 @@
+// Import GOV.UK elements, this will import the frontend toolkit and some base styles.
+// Take a look at elements.scss to see which files are imported.
+@import "elements/_breadcrumbs";
+@import 'elements';
+
+
+// Set up your main content area <main id="content">
+// This will give you a full width content block
+// See elements _layout.scss line 7.
+
+// If you need it, set up your grid layout - refer to the grid layout usage example
+// See elements _layout.scss line 28.
+
+// If you need a phase banner, put this inside the main content area
+// See elements _layout.scss line 22.
+
+.alpha-banner  {
+  @include phase-banner(alpha); // Change this to (beta) for a beta banner
+}
+.alpha-tag {
+  @include phase-tag(alpha); // Change this to (beta) for a beta tag
+}
+
+// If you need to create a page as part of your journey, but without GOV.UK branding
+// See localhost:3000/examples/unbranded/
+.unbranded {
+  background: $white;
+  // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
+  * {
+    font-family: Arial !important;
+
+  }
+  // Remove GOV.UK footer styles
+  #footer {
+    border: 0;
+    background: $white;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
+// either add and import new partial files, or modify those in GOV.UK elements to fit your user needs.
+@import "elements/_forms";
+@import "elements/forms/_form-block-labels";
+@import "elements/forms/_form-date";
+@import "elements/forms/_form-validation";
+@import "elements/_breadcrumbs";
+
+ #radio-indent-1.selected {
+  background: #fff;
+  border-color: $black;
+}
+
+.swatch-alpha {
+  background-color: $alpha-colour;
+}
+
+.phase-banner-alpha {
+  padding: 10px 0 8px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #bfc1c3;
+}
+
+@media (min-width: 641px) {
+  .phase-banner-alpha {
+    padding-bottom: 10px;
+  }
+}
+
+.phase-banner-alpha p {
+  margin: 0;
+  color: #000;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@media (min-width: 641px) {
+  .phase-banner-alpha p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.phase-banner-alpha .phase-tag {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 8px 0 0;
+  padding: 2px 5px 0;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  font-weight: 700;
+  text-transform: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  background-color: $alpha-colour;
+}
+
+@media (min-width: 641px) {
+  .phase-banner-alpha .phase-tag {
+    vertical-align: baseline;
+  }
+}
+
+@media (min-width: 641px) {
+  .phase-banner-alpha .phase-tag {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.phase-banner-alpha span {
+  vertical-align: top;
+}
+
+@media (min-width: 641px) {
+  .phase-banner-alpha span {
+    vertical-align: baseline;
+  }
+}
+
+
+.intro ul {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 400;
+  text-transform: none;
+  margin: 1em 0.4em!important;
+  padding-left: 0.3em;
+  text-align: -webkit-match-parent;
+  list-style-type: circle;
+  list-style-image: url(https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px-004b50c23e288accb7f1811a46968402.gif);
+}
+
+
+.button-get-started{
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-d08eb64ed45dc2c67426f62694b5e84b.png);;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+.col1, .col2 {
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+
+#remove-control {
+  overflow: hidden;
+  width: auto;
+  padding-top: 36px;
+  margin-bottom: 30px;
+}
+
+#otherCountries, #search-main {
+  text-transform: none !important;
+  border: 1px solid #bbb !important;
+  margin: 0 !important;
+  padding: 0.5em !important;
+//  width: 320px !important;
+  clear: both !important;
+  display: block !important;
+  font-family: "nta", Arial, sans-serif !important;
+  font-size: 19px !important;
+}
+
+#otherCountries {
+  height: 47px !important;
+}
+
+input.number, #solicitor-name {
+  text-transform: none;
+  border: 1px solid #bbb;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  width: 100px;
+  clear: both;
+  display: block;
+}
+
+#solicitor-name {
+  width: 440px;
+}
+
+#addScnt {
+  display: block;
+  float: left;
+  clear: both;
+}
+
+.typeahead-list {
+  font-family: "nta", Arial, sans-serif !important;
+  font-size: 19px !important;
+}
+
+.warning {
+  background: url("https://assets.registertovote.service.gov.uk/assets/images/icon-important.png") no-repeat scroll 0 0.5em;
+  padding-left: 3em;
+}
+
+.warning p {
+  font-weight: 600;
+}
+
+//Change button
+.change{
+  color: $black;
+  position: relative;
+  float: right;
+  margin-top: 0;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-shadow: 0 2.5px 0 #b5babe;
+  font-size: 0.9em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+}
+
+a.change{
+  color: $black !important;
+
+}
+
+.summary_heading {
+  width: inherit;
+  max-width: 30em;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.summary_block{
+  max-width: 30em;
+  border-top: 1px solid #dee0e2;
+  padding: 1em 0.5em 0em 0em;
+}
+.summary_group{
+  width: 45%;
+  padding-left:20px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.change, .change:hover,  .change:focus,  .change:visited {
+  color: $black;
+  background: #d0d3d6;
+}
+  .summary_block h3 {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+  .container-confirmed {
+    color: white;
+    background-color: $turquoise;
+    padding: 0px 0px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    width: 100%;
+  }
+
+  .container-warning {
+    text-align: center;
+    background-color: $yellow;
+    color: #333333;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+i.flaticon-checked21
+ {
+   padding-right: 22px;
+   color: white;
+   font-weight: bold;
+ }
+i.flaticon-exclamationmark:before {
+  font-size: 35px;
+}
+
+i.flaticon-fastforward4 {
+  float: right;
+}
+
+li.active i.flaticon-fastforward4 {
+  color: white;
+}
+
+i {
+  padding-right: 15px;
+
+}
+.reference {
+   margin-top: 15px !important;
+ }
+
+
+//Errors
+.error_div{
+  border-left: 5px solid $error-colour;
+  padding-left: 15px;
+}
+
+.error_message {
+  color: $error-colour;
+  font-weight: bold;
+}
+
+/* JQuery Tabs */
+#tabs {
+  font-family: "nta", Arial, sans-serif !important;
+  font-weight: normal !important;
+  border: none !important;
+  margin-bottom: 25px;
+}
+
+.ui-widget-header {
+  border: 0px !important;
+  background: none !important;
+}
+
+.ui-widget-content {
+  font-size: 18px !important;
+}
+
+.ui-tabs .ui-tabs-panel {
+  border: none !important;
+  border-top: solid 1px #bfc1c3 !important;
+}
+
+ul.ui-tabs-nav {
+  margin-bottom: 0px !important;
+}
+
+.ui-tabs .ui-tabs-nav li {
+  display: block;
+  float: none;
+  position: relative;
+  background: $grey-3;
+  border: none;
+  padding: 18px 30px 15px 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: $link-active-colour !important;
+  top: 1px !important;
+}
+
+.ui-tabs .ui-tabs-nav li a:focus {
+  background: none;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+  font-weight: normal !important;
+}
+
+.ui-state-active {
+  background-color: $white !important;
+  border-color: #bfc1c3 !important;
+  font-weight: normal !important;
+}
+
+.ui-state-default a {
+  color: $link-active-colour !important;
+  font-weight: normal !important;
+  text-decoration: underline !important;
+  background-color: #fff;
+  border: solid 1px #bfc1c3;
+  position: relative;
+  z-index: 5;
+}
+
+.ui-state-active a {
+  border-bottom: solid 1px #fff;
+  color: $text-colour !important;
+  text-decoration: none !important;
+}
+
+.ui-tabs .ui-tabs-nav li a:hover {
+  background-color: #bfc1c3;
+  text-decoration: underline;
+  color: $link-active-colour !important;
+}
+
+.ui-tabs-panel a:link {
+  color: #005ea5 !important;
+}
+
+.application-notice.info-notice{
+  border-left: 10px solid #bfc1c3!important;
+  margin-bottom: 1em!important;
+  padding-left: 20px;
+}
+
+.application-notice.info-notice p{
+  padding: 20px;
+}
+
+
+//Eligibility
+.el_option{
+  width: 100%;
+  height: 35px;
+  font-size: 17px;
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+.categoryButtons{
+  display: block;
+  background: #dee0e2;
+  border: 1px solid #dee0e2;
+  margin-bottom: 5px;
+  cursor: pointer;
+  height: 45px;
+  width: 430px;
+  text-align: left;
+  font-size: 17px;
+}
+.documentButtons{
+  display: block;
+  background: #dee0e2;
+  border: 1px solid #dee0e2;
+  margin-bottom: 5px;
+  cursor: pointer;
+  height: 45px;
+  width: 430px;
+  text-align: left;
+  font-size: 17px;
+}
+
+.hide{
+  display: none;
+}
+.bulletPoints{
+  list-style-type: circle; list-style-image: url(https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px-004b50c23e288accb7f1811a46968402.gif);margin-left: 14px
+}
+
+.print{
+  background-image: url('../images/icon-print.png');
+  background-size: 21px 20px;
+  padding-left: 27px;
+  background-repeat: no-repeat;
+}
+
+
+.find-address, .address-manual {
+  float: left;
+}
+
+.address-manual {
+  margin-top: 7px;
+}
+
+
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+table.summary-table {
+  width: 70%;
+}
+
+td.summary-table-cell-label {
+   width: 33%;
+   vertical-align: top;
+   border-top: 1px solid $border-colour;
+ }
+
+td.summary-table-cell-content {
+  width: 33%;
+  vertical-align: top;
+  border-top: 1px solid $border-colour;
+  padding-left: 3em;
+}
+
+td.summary-table-cell-link {
+  width: 33%;
+  vertical-align: top;
+  border-top: 1px solid $border-colour;
+  text-align: right;
+  padding-right: 0em;
+}
+
+
+/** Search **/
+#search-form input.submit {
+  width: 47px;
+  height: 48px;
+  border-width: 0 0 0 1px;
+  border-left-color: #222;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  overflow: hidden;
+  text-indent: -5000px;
+  cursor: pointer;
+  color: #fff;
+  background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat 5px 50%;
+}
+
+#search-form {
+  margin-bottom: 30px;
+}
+
+#search-main {
+  float: left;
+}
+
+
+.myDocuments{
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  margin-bottom: 10px;
+}
+
+
+.eligible_tag{
+  color: #008000;
+}
+.certify_tag {
+  color: #ff0000;
+}
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover {
+  border-radius: 0;
+  background-color: $link-colour !important;
+
+}
+
+@import 'elements/int_tel_num/intlTelInput';
+.iti-flag {background-image: url("/public/images/flags.png");}
+
+
+
+.service-type ul {
+  list-style-type: none;
+  padding-left:0;
+  float: left;
+  margin-top: 15px;
+}
+
+.no-margin:before {
+  margin-left: 0 !important;
+  color: #008000;
+}
+
+/** Filter options **/
+.filter-form {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+#filter-block, #search-block {
+  background-color: #dee0e2;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+#filter-block .container-head,
+#search-block .container-head {
+  padding: 10px;
+  font-weight: bold;
+}
+
+#filter-block .container,
+#search-block .container {
+  background-color: white;
+  padding: 6px
+}
+
+#filter-block ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#filter-block li {
+  padding: 7px;
+  border-bottom: 1px solid #dee0e2;
+}
+
+#filter-block li input {
+  margin-right: 5px;
+}
+
+#search-block #search-form {
+  margin-bottom: 0;
+}
+
+#search-block .container {
+  padding: 0;
+  background-color: transparent;
+}
+
+#search-filter {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  background: white;
+  border: 1px solid #bfc1c3;
+  width: 100%;
+  margin: 0 0 0 -1px;
+  padding: 5px 0;
+  text-indent: 5px;
+}

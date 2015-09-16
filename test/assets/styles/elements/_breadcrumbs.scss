@@ -1,0 +1,29 @@
+#global-breadcrumb ol li {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/separator-cdeb08166e771d0c630c018110044965.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  float: left;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  padding-right: 1em;
+  zoom: 1;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  color: #0b0c0c;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+}
+a:visited {
+  color: #000000;
+}
+
+#global-breadcrumb ol li:last-child {
+  background-image: none;
+  margin-right: 0;
+}
